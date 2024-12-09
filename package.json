@@ -1,0 +1,17 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Liam Rayback",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.8.4",
+    "node": "^22.12.0"
+  }
+}
