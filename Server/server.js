@@ -16,4 +16,14 @@ mongoose.connection.once('open', () => {
 });
 
 
-app.listen(3000, () => console.log('Server is running on port 3000'));
+const userRoutes = require('./routes/api/userRoutes');
+const thoughtRoutes = require('./routes/api/thoughtRoutes');
+
+app.use('/api/users', userRoutes);
+app.use('/api/thoughts', thoughtRoutes);
+
+
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
