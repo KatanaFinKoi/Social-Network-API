@@ -1,23 +1,23 @@
-const mongoose = require('mongoose');
-const express = require('express');
+import { connect, connection } from 'mongoose';
+import express, { json } from 'express';
 const app = express();
 
 
-app.use(express.json());
+app.use(json());
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/socialNetworkDB', {
+connect('mongodb://127.0.0.1:27017/socialNetworkDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-mongoose.connection.once('open', () => {
+connection.once('open', () => {
   console.log('Connected to MongoDB');
 });
 
 
-const userRoutes = require('./routes/api/userRoutes');
-const thoughtRoutes = require('./routes/api/thoughtRoutes');
+import userRoutes from './routes/api/userRoutes';
+import thoughtRoutes from './routes/api/thoughtRoutes';
 
 app.use('/api/users', userRoutes);
 app.use('/api/thoughts', thoughtRoutes);

@@ -1,4 +1,4 @@
-import { find } from '../models/Thought';
+import { find } from '../Models/Thought.js';
 
 
 const getAllThoughts = async (req, res) => {

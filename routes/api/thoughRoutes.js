@@ -1,7 +1,7 @@
 const router = require('express').Router();
-import { getAllThoughts } from '../../controllers/thoughtController';
+import { getAllThoughts } from '../../controllers/thoughtController.js';
 
-// GET /api/thoughts
+
 router.get('/', getAllThoughts);
 
 export default router;

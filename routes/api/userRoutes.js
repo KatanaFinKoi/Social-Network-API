@@ -1,7 +1,7 @@
 const router = require('express').Router();
-import { getAllUsers } from '../../controllers/userController';
+import { getAllUsers } from '../../controllers/userController.js';
 
-// GET /api/users
+
 router.get('/', getAllUsers);
 
 export default router;

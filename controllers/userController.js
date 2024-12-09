@@ -1,4 +1,4 @@
-import { find } from '../models/User';
+import { find } from '../Models/User.js';
 
 
 const getAllUsers = async (req, res) => {
