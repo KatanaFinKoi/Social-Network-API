@@ -1,9 +1,10 @@
-const router = require('express').Router();
-// import { user } from 'pg/lib/defaults';
-import getAllUsers from '../../controllers/UserController.js';
+import express from 'express';
+import getAllUsers from '../../controllers/userController.js';
 
-userRoutes = () => {
+const router = express.Router();
+
+const userRoutes = (router) => {
   router.get('/', getAllUsers);
-}
+};
 
 export default userRoutes;

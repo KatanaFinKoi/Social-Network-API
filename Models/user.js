@@ -35,11 +35,11 @@ const userSchema = new Schema(
 userSchema
   .virtual('fullName')
   // Getter
-  .get(function find(this) {
+  .get(function find(){
     return `${this.first} ${this.last}`;
   })
   // Setter to set the first and last name
-  .set(function (this, v) {
+  .set(function (v) {
     const first = v.split(' ')[0];
     const last = v.split(' ')[1];
     this.set({ first, last });

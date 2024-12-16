@@ -2,7 +2,7 @@ const { connect, connection } = pkg
 import pkg from 'mongoose';
 import express, { json } from 'express';
 import userRoutes from './routes/api/userRoutes.js';
-// import thoughtRoutes from './routes/api/thoughtRoutes.js';
+import thoughtRoutes from './routes/api/thoughtRoutes.js';
 const app = express();
 
 
@@ -21,7 +21,7 @@ connection.once('open', () => {
 
 
 app.use('/api/users', userRoutes);
-// app.use('/api/thoughts', thoughtRoutes);
+app.use('/api/thoughts', thoughtRoutes);
 
 
 const PORT = 3000;
