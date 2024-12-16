@@ -1,5 +1,8 @@
-import { connect, connection } from 'mongoose';
+const { connect, connection } = pkg
+import pkg from 'mongoose';
 import express, { json } from 'express';
+import userRoutes from './routes/api/userRoutes.js';
+// import thoughtRoutes from './routes/api/thoughtRoutes.js';
 const app = express();
 
 
@@ -16,11 +19,9 @@ connection.once('open', () => {
 });
 
 
-import userRoutes from './routes/api/userRoutes';
-import thoughtRoutes from './routes/api/thoughtRoutes';
 
 app.use('/api/users', userRoutes);
-app.use('/api/thoughts', thoughtRoutes);
+// app.use('/api/thoughts', thoughtRoutes);
 
 
 const PORT = 3000;

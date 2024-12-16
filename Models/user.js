@@ -32,9 +32,18 @@ const userSchema = new Schema(
 );
 
 
-userSchema.virtual('friendCount').get(function () {
-  return this.friends.length;
-});
+userSchema
+  .virtual('fullName')
+  // Getter
+  .get(function find(this) {
+    return `${this.first} ${this.last}`;
+  })
+  // Setter to set the first and last name
+  .set(function (this, v) {
+    const first = v.split(' ')[0];
+    const last = v.split(' ')[1];
+    this.set({ first, last });
+  });
 
 const User = model('User', userSchema);
 export default User;

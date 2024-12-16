@@ -4,4 +4,4 @@ import { getAllThoughts } from '../../controllers/thoughtController.js';
 
 router.get('/', getAllThoughts);
 
-export default router;
+export default thoughtRoutes;
