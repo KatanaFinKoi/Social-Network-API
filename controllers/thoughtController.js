@@ -10,4 +10,4 @@ const getAllThoughts = async (req, res) => {
   }
 };
 
-export default { getAllThoughts };
+export default getAllThoughts;

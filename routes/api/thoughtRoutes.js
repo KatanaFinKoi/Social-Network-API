@@ -1,12 +1,12 @@
-const router = express.Router();
-import getAllThoughts from '../../controllers/thoughtController.js';
 import express from 'express';
+import getAllThoughts from '../../controllers/thoughtController.js';
 
-const thoughtRoutes = (router) => {
-    router.get('/', getAllThoughts);
-  };
+const router = express.Router();
+
+router.get('/', getAllThoughts);
+
   
-export default thoughtRoutes;
+export default router;
 
 
 

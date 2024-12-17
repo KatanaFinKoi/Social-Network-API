@@ -2,6 +2,7 @@ import find from '../Models/User.js';
 
 
 const getAllUsers = async (req, res) => {
+  console.log('getAllUsers');
   try {
     const users = await find(); 
     res.json(users);
