@@ -12,9 +12,9 @@ const reactionSchema = new Schema(
       required: true,
       maxlength: 280,
     },
-    username: {
+    email: {
       type: String,
-      required: true,
+      required: false,
     },
     createdAt: {
       type: Date,
